@@ -3,28 +3,69 @@
 <head>
 <title>meu contador</title>
 <style>
-*{margin: 0 ;
+   *{
+	margin: 0 ;
 	box-sizing: border-box;
 }
 
 body{
-	
 	min-height: 100vh;
-	background-color: black;
-	color: blanchedalmond;
+	background: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+	display: grid;
+	place-items: center;
+}
+section{
+background:#3b3b3b;
+border-radius: 8px;
+padding: 20px;
+display: flex;
+align-items: center;
+flex-direction: column;
 }
 ::selection{
-	background: rgba[ 255, 255, 255, .2];
-
+	background: rgba(255, 255, 255, .2);
+    padding: 20px;
+    border-radius:5px;
+	text-align:center;
 }
-</style>
+
+p{
+  font-size: 100px;
+  color: #ffffff;
+}
+</style> 
 </head>
+
 <body>
  <section>
 	<h1>contador</h1>
-	<p>0</p>
-	<button>menos</button>
-	<button>mais</button>
- </section>
-</body>
+	<p id="resultado">0</p>
+	<div>
+		<button onclick="diminuir()">menos</button>
+		<button onclick="aumentar()">mais</button>
+	</div>
+    </section>
+
+    <script>
+			let inicialNumero = 0
+			 function diminuir(){
+				inicialNumero--
+				mostrar()
+				
+	 }
+	  function aumentar(){
+		inicialNumero++
+		mostrar()
+	 }
+	  function mostrar(){
+    const p = document.querySelector("#resultado")
+		p.innerHTML= inicialNumero
+	 }
+	  mostrar()
+
+	</script>
+
+  </body>
+
 </html>
