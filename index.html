@@ -1,72 +1,76 @@
 <!DOCTYPE html>
+
 </html>
+
 <head>
-<title>meu contador</title>
-<style>
-   *{
-	margin: 0 ;
-	box-sizing: border-box;
-}
+	<title>meu contador</title>
+	<style>
+		* {
+			margin: 0;
+			box-sizing: border-box;
+		}
 
-body{
-	min-height: 100vh;
+		body {
+			min-height: 100vh;
 
-    background-color: black;   
-	color: rgb(255, 255, 255);
-	display: grid;
-	place-items: center;
-}
-section{
-background:#3b3b3b;
-border-radius: 8px;
-padding: 20px;
-display: flex;
-align-items: center;
-flex-direction: column;
-}
-::selection{
-	background: rgba(255, 255, 255, .2);
-    padding: 20px;
-    border-radius:5px;
-	text-align:center;
-}
+			background-color: black;
+			color: rgb(255, 255, 255);
+			display: grid;
+			place-items: center;
+		}
 
-p{
-  font-size: 100px;
-  color: #ffffff;
-}
-</style> 
+		section {
+			background: #3b3b3b;
+			border-radius: 8px;
+			padding: 20px;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+		}
+
+		::selection {
+			background: rgba(255, 255, 255, .2);
+			padding: 20px;
+			border-radius: 5px;
+			text-align: center;
+		}
+
+		p {
+			font-size: 100px;
+			color: #ffffff;
+		}
+	</style>
 </head>
 
 <body>
- <section>
-	<h1>contador</h1>
-	<p id="resultado">0</p>
-	<div>
-		<button onclick="diminuir()">menos</button>
-		<button onclick="aumentar()">mais</button>
-	</div>
-    </section>
+	<section>
+		<h1>contador</h1>
+		<p id="resultado">0</p>
+		<div>
+			<button onclick="diminuir()">menos</button>
+			<button onclick="aumentar()">mais</button>
+		</div>
+	</section>
 
-    <script>
-			let inicialNumero = 0
-			 function diminuir(){
-				inicialNumero--
-				mostrar()
-				
-	 }
-	  function aumentar(){
-		inicialNumero++
+	<script>
+		let inicialNumero = 0
+		function diminuir() {
+			inicialNumero--
+			mostrar()
+
+		}
+		function aumentar() {
+			inicialNumero++
+			mostrar()
+		}
+		function mostrar() {
+			const p = document.querySelector("#resultado")
+			p.innerHTML = inicialNumero
+		}
 		mostrar()
-	 }
-	  function mostrar(){
-    const p = document.querySelector("#resultado")
-		p.innerHTML= inicialNumero
-	 }
-	  mostrar()
 
 	</script>
 
-  </body>
+</body>
 
 </html>
